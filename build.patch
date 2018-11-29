@@ -1,0 +1,15 @@
+diff -purN dmap2gcode-0.11_src.org/Makefile dmap2gcode-0.11_src/Makefile
+--- dmap2gcode-0.11_src.org/Makefile	1970-01-01 00:00:00.000000000 +0000
++++ dmap2gcode-0.11_src/Makefile	2018-11-29 09:14:50.852775089 +0000
+@@ -0,0 +1,10 @@
++all: none
++
++none:
++	echo Build
++	
++
++install:
++	mkdir -p $(DESTDIR)/usr/bin
++	cp dmap2gcode-011.py $(DESTDIR)/usr/bin/dmap2gcode
++	chmod a+x $(DESTDIR)/usr/bin/dmap2gcode
+\ No newline at end of file
