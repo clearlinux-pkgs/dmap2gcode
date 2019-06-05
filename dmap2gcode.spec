@@ -4,7 +4,7 @@
 #
 Name     : dmap2gcode
 Version  : 0.11
-Release  : 2
+Release  : 3
 URL      : http://www.scorchworks.com/Dmap2gcode/dmap2gcode-0.11_src.zip
 Source0  : http://www.scorchworks.com/Dmap2gcode/dmap2gcode-0.11_src.zip
 Summary  : No detailed summary available
