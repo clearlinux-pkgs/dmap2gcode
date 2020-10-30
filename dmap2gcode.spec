@@ -4,7 +4,7 @@
 #
 Name     : dmap2gcode
 Version  : 0.11
-Release  : 3
+Release  : 4
 URL      : http://www.scorchworks.com/Dmap2gcode/dmap2gcode-0.11_src.zip
 Source0  : http://www.scorchworks.com/Dmap2gcode/dmap2gcode-0.11_src.zip
 Summary  : No detailed summary available
@@ -27,18 +27,28 @@ bin components for the dmap2gcode package.
 
 %prep
 %setup -q -n dmap2gcode-0.11_src
+cd %{_builddir}/dmap2gcode-0.11_src
 %patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1543732298
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1604084702
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
+
 %install
-export SOURCE_DATE_EPOCH=1543732298
+export SOURCE_DATE_EPOCH=1604084702
 rm -rf %{buildroot}
 %make_install
 
