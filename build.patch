@@ -10,7 +10,7 @@ diff -purN dmap2gcode-0.11_src.org/Makefile dmap2gcode-0.11_src/Makefile
 +
 +install:
 +	mkdir -p $(DESTDIR)/usr/bin
-+	cp dmap2gcode-011.py $(DESTDIR)/usr/bin/dmap2gcode
++	cp dmap2gcode*.py $(DESTDIR)/usr/bin/dmap2gcode
 +	dos2unix $(DESTDIR)/usr/bin/dmap2gcode
 +	chmod a+x $(DESTDIR)/usr/bin/dmap2gcode
 \ No newline at end of file
